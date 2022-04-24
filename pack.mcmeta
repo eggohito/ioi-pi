@@ -1,0 +1,10 @@
+{
+    "pack": {
+        "version": "1.0.0",
+        "authors": [
+            "eggohito"
+        ],
+        "pack_format": 8,
+        "description": "An Origins datapack that provides an interface for the Item on Item power type"
+    }
+}
