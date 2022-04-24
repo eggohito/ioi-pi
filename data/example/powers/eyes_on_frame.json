@@ -1,0 +1,40 @@
+{
+    "type": "apoli:item_on_item",
+    "using_item_condition": {
+        "type": "apoli:ingredient",
+        "ingredient": {
+            "item": "minecraft:ender_eye"
+        }
+    },
+    "on_item_condition": {
+        "type": "apoli:ingredient",
+        "ingredient": {
+            "item": "minecraft:end_portal_frame"
+        }
+    },
+    "using_item_action": {
+        "type": "apoli:modify",
+        "modifier": "ioi-pi:api/select_extra_item"
+    },
+    "on_item_action": {
+        "type": "apoli:modify",
+        "modifier": "ioi-pi:api/select_item"
+    },
+    "entity_action": {
+        "type": "apoli:and",
+        "actions": [
+            {
+                "type": "apoli:execute_command",
+                "command": "tag @s add example.eyes_on_frame"
+            },
+            {
+                "type": "apoli:execute_command",
+                "command": "function #ioi-pi:api/selected_item/get"
+            },
+            {
+                "type": "apoli:execute_command",
+                "command": "tag @s remove example.eyes_on_frame"
+            }
+        ]
+    }
+}
