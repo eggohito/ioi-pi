@@ -7,6 +7,10 @@
 execute if entity @s[advancements = {ioi-pi:impl/selected_item/get = true}] run scoreboard players set #impl.adv.call ioi-pi 1
 
 
+#   Add a tag to refer to the player in some context where the executor has to be changed
+tag @s add ioi-pi.player
+
+
 #   Process the inventory and nearby blocks/entities that have inventories
 function ioi-pi:impl/selected_item/get/prepare_whole_inventory
 
@@ -23,7 +27,9 @@ function ioi-pi:impl/selected_item/get/container
 function ioi-pi:impl/selected_item/get/non-player_entity
 
 
-#   Reset the score of the `#impl.adv.call` score holder
+#   Do some clean up
+tag @s remove ioi-pi.player
+
 scoreboard players reset #impl.adv.call ioi-pi
 
 execute if entity @s[advancements = {ioi-pi:impl/selected_item/get = true}] run advancement revoke @s only ioi-pi:impl/selected_item/get
