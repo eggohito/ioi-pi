@@ -1,15 +1,14 @@
-data modify storage example:storage item set value {id: "minecraft:ender_eye", Count: 1b, Slot: 0b}
+data modify storage example:storage eyes append value {id: "minecraft:ender_eye"}
 
 
-execute if score #eyes_to_give example > #64 example run data modify storage example:storage item.Count set value 64b
+execute if score #eyes_to_give example > #64 example run data modify storage example:storage eyes[-1].Count set value 64b
 
-execute if score #eyes_to_give example <= #64 example store result storage example:storage item.Count byte 1 run scoreboard players get #eyes_to_give example
+execute if score #eyes_to_give example <= #64 example store result storage example:storage eyes[-1].Count byte 1 run scoreboard players get #eyes_to_give example
+
+execute store result storage example:storage eyes[-1].Slot byte 1 run scoreboard players get #current_slot example
 
 
-data modify block -30000000 0 1602 Items append from storage example:storage item
-
-loot spawn ~ ~ ~ mine -30000000 0 1602 minecraft:air{drop_contents: 1b}
-
+scoreboard players add #current_slot example 1
 
 scoreboard players operation #eyes_to_give example -= #64 example
 

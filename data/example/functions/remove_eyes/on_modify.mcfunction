@@ -12,3 +12,6 @@ data remove storage ioi-pi:output item.tag.eyes
 
 
 function example:remove_eyes/give_eyes
+
+
+scoreboard players reset #current_slot example
