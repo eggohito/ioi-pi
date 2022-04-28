@@ -16,3 +16,13 @@ scoreboard players operation #items_to_add example += #items_added example
 execute store result storage ioi-pi:output item.tag.eyes int 1 run scoreboard players get #items_to_add example
 
 data modify storage ioi-pi:output item.tag.has_eyes set value 1b
+
+
+#   Display the count of the Ender Eyes stored in the End Portal Frame
+setblock -30000000 0 1603 minecraft:oak_sign
+
+data modify block -30000000 0 1603 Text1 set value '{"translate": "Eyes stored: %s", "with": [{"storage": "ioi-pi:output", "nbt": "item.tag.eyes"}], "color": "gray", "italic": false, "interpret": true}'
+
+data remove storage ioi-pi:output item.tag.display.Lore
+
+data modify storage ioi-pi:output item.tag.display.Lore append from block -30000000 0 1603 Text1
