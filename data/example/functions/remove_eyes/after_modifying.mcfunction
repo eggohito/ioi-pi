@@ -1,8 +1,10 @@
-data modify block -30000000 0 1602 Items set from storage example:storage eyes
+#   Count how many elements are in the `eyes` NBT path of the `example:remove_eyes` storage before processing it
+execute store result score #eyes_elements ioi-pi if data storage example:remove_eyes eyes[]
 
-loot give @s mine -30000000 0 1602 minecraft:air{drop_contents: 1b}
+execute if score #eyes_elements ioi-pi matches 1.. run function example:remove_eyes/after_modifying/give_eyes
 
 
-data remove storage example:storage eyes
+#   Do some clean up
+data remove storage example:remove_eyes eyes
 
 data remove block -30000000 0 1602 Items
