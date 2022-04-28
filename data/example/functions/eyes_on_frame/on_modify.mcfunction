@@ -12,3 +12,7 @@ execute store result score #eyes example run data get storage ioi-pi:output item
 execute unless score #eyes example >= #max_eyes example run function example:eyes_on_frame/on_modify/put_eyes
 
 execute if score #eyes example >= #max_eyes example run playsound minecraft:ui.button.click master @a ~ ~ ~ 1 2
+
+
+#   Do some clean up
+scoreboard players reset #set_extra_eyes_to example
