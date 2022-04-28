@@ -31,6 +31,6 @@ data modify storage ioi-pi:output item.tag.display.Lore append from block -30000
 
 
 #   Check for overflows
-execute if score #set_extra_eyes_to example matches 1.. run function example:eyes_on_frame/on_modify/set_extra_eyes
+execute if score #eyes_overflow example matches 1.. run function example:eyes_on_frame/on_modify/set_extra_eyes
 
-execute unless score #set_extra_eyes_to example matches 1.. run clear @s minecraft:ender_eye{ioi-pi: {selected: 1b, extra: 1b}}
+execute unless score #eyes_overflow example matches 1.. run clear @s minecraft:ender_eye{ioi-pi: {selected: 1b, extra: 1b}}

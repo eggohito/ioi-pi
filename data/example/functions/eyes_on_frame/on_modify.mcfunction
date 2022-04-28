@@ -15,4 +15,4 @@ execute if score #eyes example >= #max_eyes example run playsound minecraft:ui.b
 
 
 #   Do some clean up
-scoreboard players reset #set_extra_eyes_to example
+scoreboard players reset #eyes_overflow example
