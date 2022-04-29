@@ -10,8 +10,17 @@
                 }
             },
             {
-                "type": "apoli:nbt",
-                "nbt": "{Potion: \"minecraft:water\"}"
+                "type": "apoli:or",
+                "conditions": [
+                    {
+                        "type": "apoli:nbt",
+                        "nbt": "{Potion: \"minecraft:water\"}"
+                    },
+                    {
+                        "type": "apoli:nbt",
+                        "nbt": "{Potion: \"water\"}"
+                    }
+                ]
             }
         ]
     },
@@ -22,15 +31,12 @@
         }
     },
     "using_item_action": {
-        "type": "apoli:consume",
-        "amount": 1
+        "type": "apoli:modify",
+        "modifier": "ioi-pi:api/select_extra_item"
     },
     "on_item_action": {
         "type": "apoli:modify",
         "modifier": "ioi-pi:api/select_item"
-    },
-    "result": {
-        "item": "minecraft:glass_bottle"
     },
     "entity_action": {
         "type": "apoli:and",

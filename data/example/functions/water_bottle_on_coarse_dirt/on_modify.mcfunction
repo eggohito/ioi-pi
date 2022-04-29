@@ -6,6 +6,10 @@ scoreboard objectives add example dummy
 playsound minecraft:entity.generic.splash master @a ~ ~ ~ 1 1.5
 
 
+#   Clear the water bottle used
+clear @s minecraft:potion{ioi-pi: {selected: 1b, extra: 1b}}
+
+
 #   Count how many Coarse Dirt items are going to be modified
 execute store result score #coarse_dirt_count example run data get storage ioi-pi:output item.Count
 

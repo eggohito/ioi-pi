@@ -14,6 +14,10 @@ execute if score #inventory_elements example matches 37.. run loot spawn ~ ~ ~ m
 execute unless score #inventory_elements example matches 37.. run loot give @s mine -30000000 0 1602 minecraft:air{drop_contents: 1b}
 
 
+#   Give a glass bottle as a replacement for the water bottle
+give @s minecraft:glass_bottle
+
+
 #   Do some clean up
 data remove block -30000000 0 1602 Items
 
