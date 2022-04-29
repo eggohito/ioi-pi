@@ -1,5 +1,6 @@
 {
     "values": [
+        "example:epic_wooden_sword/check",
         "example:eyes_on_frame/check",
         "example:remove_eyes/check",
         "example:water_bottle_on_coarse_dirt/check"

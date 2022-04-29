@@ -1,0 +1,17 @@
+{
+    "type": "apoli:modify_crafting",
+    "recipe": "minecraft:wooden_sword",
+    "item_action": {
+        "type": "apoli:and",
+        "actions": [
+            {
+                "type": "apoli:modify",
+                "modifier": "example:epic_wooden_sword"
+            },
+            {
+                "type": "apoli:modify",
+                "modifier": "ioi-pi:api/select_item_result"
+            }
+        ]
+    }
+}

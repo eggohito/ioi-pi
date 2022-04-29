@@ -1,0 +1,44 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{epic_wooden_sword: 1b}"
+    },
+    {
+        "function": "minecraft:set_name",
+        "name": {
+            "text": "EPIC WOODEN SWORD!!!",
+            "color": "light_purple",
+            "bold": true,
+            "italic": false
+        }
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            {
+                "text": "This sword is very epic.",
+                "color": "gray",
+                "italic": false
+            }
+        ]
+    },
+    {
+        "function": "minecraft:set_attributes",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.attack_damage",
+                "amount": 69420,
+                "slot": "mainhand",
+                "operation": "addition",
+                "name": "EPICNESS"
+            },
+            {
+                "attribute": "minecraft:generic.attack_speed",
+                "amount": 100,
+                "slot": "mainhand",
+                "operation": "addition",
+                "name": "SLASHY SLASH"
+            }
+        ]
+    }
+]
