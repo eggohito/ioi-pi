@@ -8,7 +8,7 @@
 
 
 #   Set the score of the `#impl.adv.call` score holder to 1
-execute if entity @s[advancements = {ioi-pi:impl/selected_item/get = true}] run scoreboard players set #impl.adv.call ioi-pi 1
+execute if entity @s[advancements = {ioi-pi:impl/selected_item/get = {non-accessible_ui_handler = true, result_item_handler = false}}] run scoreboard players set #impl.adv.call ioi-pi 1
 
 
 #   Add a tag to refer to the player in some context where the executor has to be changed
