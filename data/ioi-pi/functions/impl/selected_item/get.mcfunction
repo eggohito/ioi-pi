@@ -1,5 +1,7 @@
 #> ioi-pi:impl/selected_item/get
 #
+#   > Get the selected item from the player's inventory, from nearby container blocks and from nearby entities that has an inventory
+#
 #@within
 #   advancement ioi-pi:impl/selected_item/get
 #   tag/function ioi-pi:api/selected_item/get

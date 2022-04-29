@@ -1,5 +1,7 @@
 #> ioi-pi:impl/selected_item/on_modify
 #
+#   > Call this function to modify the selected item(s)
+#
 #@within function ioi-pi:impl/selected_item/modify/current_element
 
 
