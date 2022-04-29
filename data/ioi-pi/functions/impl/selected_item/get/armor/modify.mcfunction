@@ -20,4 +20,4 @@ function ioi-pi:impl/modify_inventory/apply/armor
 #   Do some clean up before calling the `ioi-pi:impl/selected_item/after_modifying` function
 function ioi-pi:impl/selected_item/clean_up
 
-function ioi-pi:impl/selected_item/after_modifying
+execute unless score #impl.adv.call ioi-pi = #impl.adv.call ioi-pi run function ioi-pi:impl/selected_item/after_modifying
