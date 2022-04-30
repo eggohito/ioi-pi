@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "non-accessible_ui_handler": {
+        "from_inaccessible_slot": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
@@ -22,7 +22,7 @@
                 ]
             }
         },
-        "result_item_handler": {
+        "from_recipe": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
@@ -47,8 +47,8 @@
     },
     "requirements": [
         [
-            "non-accessible_ui_handler",
-            "result_item_handler"
+            "from_inaccessible_slot",
+            "from_recipe"
         ]
     ],
     "rewards": {

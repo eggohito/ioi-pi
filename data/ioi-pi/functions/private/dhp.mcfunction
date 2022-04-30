@@ -19,7 +19,7 @@
 
 #>  Determines if the function is called by the advancement
 #@within ioi-ipi:impl/selected_item/**
-#declare score_holder #impl.adv.call
+#declare score_holder #impl.selected_item.inaccessible
 
 
 #>  Determines if the library is currently modifying the selected item(s)
