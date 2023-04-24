@@ -4,7 +4,7 @@
 
 
 #   Prepare the MinecraftPhi chunk
-function ioi-pi:private/forceload_chunk
+function ioi-pi:private/minecraftphi/forceload_chunk
 
 
 #   Add a scoreboard objective

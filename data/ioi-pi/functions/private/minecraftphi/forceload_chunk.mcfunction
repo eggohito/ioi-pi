@@ -1,4 +1,4 @@
-#> ioi-pi:private/forceload_chunk
+#> ioi-pi:private/minecraftphi/forceload_chunk
 #
 #   > Create a burrow that contains MinecraftPhi's components
 #
