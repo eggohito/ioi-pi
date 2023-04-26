@@ -6,31 +6,34 @@
 
 
 #>  Data storages (internal)
-#   -   `ioi-pi:tmp`    =   Used for processing temporary data
+#   -   `ioi-pi:tmp/general`    =   Used for processing general temporary data
+#   -   `ioi-pi:tmp/special`    =   Used for processing specific temporary data
 #@internal
     #declare storage ioi-pi:tmp/general
     #declare storage ioi-pi:tmp/special
 
 
 #>  Data storages (public)
-#   -   `ioi-pi:io`     =   Used for storing the selected item
+#   -   `ioi-pi:io`     =   Used for storing the selected item and the current phase
 #@public
     #declare storage ioi-pi:io
 
 
-#>  Score holders
+#>  Score holders (internal)
 #   -   `#impl.selected_item.inaccessible`  =   Determines whether the selected item(s) cannot be accessed via NBT
 #   -   `#impl.selected_item.queue_size`    =   Determines the size of the queue of selected item(s) to modify
+#   -   `#impl.selected_item.processed`     =   Determines the amount of selected items that were processed on the **end** phase
 #@internal
     #declare score_holder #impl.selected_item.inaccessible
     #declare score_holder #impl.selected_item.queue_size
+    #declare score_holder #impl.selected_item.processed
 
 
-#>  Scoreboard tags
+#>  Scoreboard tags (public)
 #   -   `ioi-pi.player`                 =   Used to refer to the player in some scenarios where the context of the executor is changed
 #   -   `ioi-pi.block_with_inventory`   =   Used for marking a block with an inventory
 #   -   `ioi-pi.entity_with_inventory`  =   Used to refer to the entity with an inventory
-#@internal
+#@public
     #declare tag ioi-pi.player
     #declare tag ioi-pi.block_with_inventory
     #declare tag ioi-pi.entity_with_inventory
