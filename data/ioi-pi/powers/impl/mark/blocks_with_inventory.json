@@ -1,0 +1,12 @@
+{
+    "type": "apoli:action_on_block_use",
+    "block_action": {
+        "type": "apoli:execute_command",
+        "command": "execute unless entity @e[tag = ioi-pi.block_with_inventory, distance = ..0.8] run function ioi-pi:impl/marker/summon"
+    },
+    "block_condition": {
+        "type": "apoli:in_tag",
+        "tag": "ioi-pi:blocks_with_inventory"
+    },
+    "hidden": true
+}

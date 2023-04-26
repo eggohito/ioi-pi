@@ -5,8 +5,8 @@
 #   function ioi-pi:tick
 
 
-#   Execute as all the marker entities that has the `ioi-pi.marker` tag
-execute as @e[type = minecraft:marker, tag = ioi-pi.marker] at @s run function ioi-pi:impl/marker/tick
+#   Execute as and at all Marker entities that has the `ioi-pi.block_with_inventory` scoreboard tag
+execute as @e[type = minecraft:marker, tag = ioi-pi.block_with_inventory] at @s run function ioi-pi:impl/marker/tick
 
 
 #   Loop this function

@@ -1,14 +1,11 @@
 #> ioi-pi:impl/marker/summon
 #
-#   > Summon a marker entity to mark a container
+#   >   Summon a marker entity with the `ioi-pi.block_with_inventory` scoreboard tag
 #
-#   - called by: `ioi-pi:mark_interacted_containers`
+#   -   Solely used for marking a block with an inventory
+#   -   Called by the `ioi-pi:impl/mark/block_w_inventory
 #
 #@private
 
 
-summon minecraft:marker ~ ~ ~ {Tags: ["ioi-pi.marker", "ioi-pi.marker.init"]}
-
-# execute as @e[tag = ioi-pi.marker.init] run say Hello!
-
-tag @e remove ioi-pi.marker.init
+summon minecraft:marker ~ ~ ~ {Tags: ["ioi-pi.block_with_inventory"]}

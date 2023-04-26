@@ -2,7 +2,7 @@
     "origins": [
         "ioi-pi:internal"
     ],
-    "name": "Programming Interface",
+    "name": "Programmable Module",
     "auto_choose": true,
     "hidden": true
 }

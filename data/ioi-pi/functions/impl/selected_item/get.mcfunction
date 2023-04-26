@@ -1,50 +1,41 @@
 #> ioi-pi:impl/selected_item/get
 #
-#   > Get the selected item from the player's inventory, from nearby container blocks and from nearby entities that has an inventory
+#   >   Get the selected item from the player's inventory and from blocks/entities with an inventory
 #
 #@within
 #   advancement ioi-pi:impl/selected_item/get
 #   tag/function ioi-pi:api/selected_item/get
 
 
-#   Determine if the selected item cannot be accessed via NBT
-execute if entity @s[advancements = {ioi-pi:impl/selected_item/get = {from_inaccessible_slot = true, from_recipe = false}}] run scoreboard players set #impl.selected_item.inaccessible ioi-pi 1
+#   Determine whether the selected item cannot be accessed via NBT
+execute store result score #impl.selected_item.inaccessible ioi-pi if entity @s[advancements = {ioi-pi:impl/selected_item/get = {from_slot = true, from_recipe = false}}]
 
 
-#   Add a tag to refer to the player in some context where the executor has to be changed
+#   Add a temporary tag to the player
 tag @s add ioi-pi.player
 
 
-#   Process the inventory and nearby blocks/entities that have inventories
-function ioi-pi:impl/modify_inventory/setup/whole_inventory
-
-function ioi-pi:impl/selected_item/get/armor
-
-function ioi-pi:impl/selected_item/get/hotbar
-
-function ioi-pi:impl/selected_item/get/inventory
-
-function ioi-pi:impl/selected_item/get/offhand
-
-function ioi-pi:impl/selected_item/get/container
-
-function ioi-pi:impl/selected_item/get/non-player_entity
+#   Start the modifying phase
+function ioi-pi:impl/selected_item/modify/phase/start/setup
 
 
-#   Do some clean up
+#   If the process of modifying the selected items were successful, end the modifying phase properly
+execute store result score #impl.selected_item.processed ioi-pi if data storage ioi-pi:tmp/special root.processed[]
+
+execute if score #impl.selected_item.processed ioi-pi matches 1.. run function ioi-pi:impl/selected_item/modify/phase/end/setup
+
+
+#   Remove the temporary tag from the player
 tag @s remove ioi-pi.player
 
 
-scoreboard players reset on_modify ioi-pi
+#   Wipe the data from the data storage used for processing the selected item(s)
+data remove storage ioi-pi:io root
 
-scoreboard players reset after_modifying ioi-pi
+data remove storage ioi-pi:tmp/general root
 
-scoreboard players reset #impl.selected_item.inaccessible ioi-pi
-
-
-data remove storage ioi-pi:temp temp
-
-data remove storage ioi-pi:output modified_items
+data remove storage ioi-pi:tmp/special root
 
 
-execute if entity @s[advancements = {ioi-pi:impl/selected_item/get = true}] run advancement revoke @s only ioi-pi:impl/selected_item/get
+#   Revoke the advancement only if the player has it
+advancement revoke @s[advancements = {ioi-pi:impl/selected_item/get = true}] only ioi-pi:impl/selected_item/get

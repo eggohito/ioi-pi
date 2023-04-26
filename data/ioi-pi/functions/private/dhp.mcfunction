@@ -1,47 +1,44 @@
 #> ioi-pi:private/dhp
 #
-#   > A placeholder function for declaring stuff
-#
-#   - Mostly for the Datapack Helper Plus extension by spgoding in Visual Studio Code
+#   >   A function for declaring stuff to be used for Datapack Helper Plus
 #
 #@private
 
 
-#>  Stores the current slot value
-#@within ioi-pi:impl/modify_inventory/setup/**
-#declare score_holder $impl.modify_inventory.slot
-
-
-#>  Stores how many elements are in the processing list
-#@within ioi-pi:impl/modify_inventory/setup/**
-#declare score_holder $impl.modify_inventory.elements
-
-
-#>  Determines if the function is called by the advancement
-#@within ioi-ipi:impl/selected_item/**
-#declare score_holder #impl.selected_item.inaccessible
-
-
-#>  Determines if the library is currently modifying the selected item(s)
-#@public
-#declare score_holder on_modify
-
-
-#>  Determines if the library has finished modifying the selected item(s)
-#@public
-#declare score_holder after_modifying
-
-
-#>  A storage for processing the inventory/items of an entity/block entity
+#>  Data storages (internal)
+#   -   `ioi-pi:tmp`    =   Used for processing temporary data
 #@internal
-#declare storage ioi-pi:temp
+    #declare storage ioi-pi:tmp/general
+    #declare storage ioi-pi:tmp/special
 
 
-#>  A storage for processing the selected item
+#>  Data storages (public)
+#   -   `ioi-pi:io`     =   Used for storing the selected item
 #@public
-#declare storage ioi-pi:output
+    #declare storage ioi-pi:io
 
 
-#>  A special shulker box used for indirectly modifying the player/entity's inventory
+#>  Score holders
+#   -   `#impl.selected_item.inaccessible`  =   Determines whether the selected item(s) cannot be accessed via NBT
+#   -   `#impl.selected_item.queue_size`    =   Determines the size of the queue of selected item(s) to modify
+#@internal
+    #declare score_holder #impl.selected_item.inaccessible
+    #declare score_holder #impl.selected_item.queue_size
+
+
+#>  Scoreboard tags
+#   -   `ioi-pi.player`                 =   Used to refer to the player in some scenarios where the context of the executor is changed
+#   -   `ioi-pi.block_with_inventory`   =   Used for marking a block with an inventory
+#   -   `ioi-pi.entity_with_inventory`  =   Used to refer to the entity with an inventory
+#@internal
+    #declare tag ioi-pi.player
+    #declare tag ioi-pi.block_with_inventory
+    #declare tag ioi-pi.entity_with_inventory
+
+
+#>  Block positions
+#   -   `-30000000 0 1602`  =   MinecraftPhi's Yellow Shulker Box
+#   -   `-30000000 0 1603`  =   MinecraftPhi's Oak Wall Sign
 #@public
-#alias vector "MinecraftPhi's yellow shulker box" -30000000 0 1602
+    #alias vector "MinecraftPhi's Yellow Shulker Box" -30000000 0 1602
+    #alias vector "MinecraftPhi's Oak Wall Sign" -30000000 0 1603

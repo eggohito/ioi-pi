@@ -1,11 +1,11 @@
 {
     "criteria": {
-        "from_inaccessible_slot": {
+        "from_slot": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{ioi-pi: {selected: 1b, result_item: 0b}}"
+                        "nbt": "{ioi_pi: {selected: 1b, from_recipe: 0b}}"
                     }
                 ],
                 "player": [
@@ -27,7 +27,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{ioi-pi: {selected: 1b, result_item: 1b}}"
+                        "nbt": "{ioi_pi: {selected: 1b, from_recipe: 1b}}"
                     }
                 ],
                 "player": [
@@ -47,7 +47,7 @@
     },
     "requirements": [
         [
-            "from_inaccessible_slot",
+            "from_slot",
             "from_recipe"
         ]
     ],

@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "init": {
+        "tick": {
             "trigger": "minecraft:tick"
         }
     },

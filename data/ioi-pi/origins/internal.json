@@ -1,10 +1,10 @@
 {
     "powers": [
-        "ioi-pi:mark_interacted_containers"
+        "ioi-pi:impl/mark/blocks_with_inventory"
     ],
     "icon": {
-        "item": "minecraft:jigsaw"
+        "item": "minecraft:structure_block"
     },
-    "name": "Item on Item",
+    "name": "Item on Item - Programmable Interface",
     "description": " "
 }
