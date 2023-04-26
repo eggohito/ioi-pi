@@ -1,4 +1,4 @@
-#> ioi-pi:impl/selected_item/get/from/inventory/blocks
+#> ioi-pi:impl/selected_item/get/from/inventory/block
 #
 #   >   Get the selected item from blocks with an inventory
 #
@@ -10,4 +10,4 @@ function ioi-pi:impl/selected_item/clear
 
 
 #   Execute at all the nearby marker entities that have the `ioi-pi.block_with_inventory` scoreboard tag to process the selected item(s) if present
-execute at @e[tag = ioi-pi.block_with_inventory, distance = ..64] run function ioi-pi:impl/selected_item/modify/from/inventory/blocks
+execute at @e[tag = ioi-pi.block_with_inventory, distance = ..64] run function ioi-pi:impl/selected_item/modify/from/inventory/block

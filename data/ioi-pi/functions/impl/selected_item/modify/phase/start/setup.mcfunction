@@ -18,6 +18,6 @@ function ioi-pi:impl/selected_item/get/from/inventory
 
 function ioi-pi:impl/selected_item/get/from/offhand
 
-function ioi-pi:impl/selected_item/get/from/inventory/blocks
+function ioi-pi:impl/selected_item/get/from/inventory/block
 
-function ioi-pi:impl/selected_item/get/from/inventory/other_entities
+function ioi-pi:impl/selected_item/get/from/inventory/other_entity

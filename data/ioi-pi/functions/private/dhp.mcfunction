@@ -8,9 +8,11 @@
 #>  Data storages (internal)
 #   -   `ioi-pi:tmp/general`    =   Used for processing general temporary data
 #   -   `ioi-pi:tmp/special`    =   Used for processing specific temporary data
+#   -   `phi.modifyinv:temp`    =   Used for processing items from the inventory of an entity
 #@internal
     #declare storage ioi-pi:tmp/general
     #declare storage ioi-pi:tmp/special
+    #declare storage phi.modifyinv:temp
 
 
 #>  Data storages (public)

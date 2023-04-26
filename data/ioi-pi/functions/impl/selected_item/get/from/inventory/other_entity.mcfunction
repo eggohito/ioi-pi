@@ -1,4 +1,4 @@
-#> ioi-pi:impl/selected_item/get/from/inventory/other_entities
+#> ioi-pi:impl/selected_item/get/from/inventory/other_entity
 #
 #   >   Get the selected item from entities with an inventory
 #
@@ -10,4 +10,4 @@ function ioi-pi:impl/selected_item/clear
 
 
 #   Execute as all the nearby entities with an inventory to process the selected item(s) if present
-execute as @e[type = #ioi-pi:entities_with_inventory, distance = ..64] run function ioi-pi:impl/selected_item/modify/from/inventory/other_entities
+execute as @e[type = #ioi-pi:entities_with_inventory, distance = ..64] run function ioi-pi:impl/selected_item/modify/from/inventory/other_entity

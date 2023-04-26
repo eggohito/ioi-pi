@@ -1,8 +1,8 @@
-#> ioi-pi:impl/selected_item/modify/from/inventory/other_entities
+#> ioi-pi:impl/selected_item/modify/from/inventory/other_entity
 #
 #   >   Modify the selected item(s) from the inventory of nearby entities
 #
-#@within function ioi-pi:impl/selected_item/get/from/inventory/other_entities
+#@within function ioi-pi:impl/selected_item/get/from/inventory/other_entity
 
 
 #   Add a temporary tag

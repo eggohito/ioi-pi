@@ -1,8 +1,8 @@
-#> ioi-pi:impl/selected_item/modify/from/inventory/blocks
+#> ioi-pi:impl/selected_item/modify/from/inventory/block
 #
 #   >   Modify the selected item(s) from the inventory of nearby blocks
 #
-#@within function ioi-pi:impl/selected_item/get/from/inventory/blocks
+#@within function ioi-pi:impl/selected_item/get/from/inventory/block
 
 
 #   Prepare and modify the selected items
