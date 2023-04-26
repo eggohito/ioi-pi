@@ -10,7 +10,7 @@
             },
             {
                 "type": "apoli:modify",
-                "modifier": "ioi-pi:api/select_item_result"
+                "modifier": "ioi-pi:api/select/result_item"
             }
         ]
     }

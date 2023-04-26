@@ -4,12 +4,23 @@
         "type": "apoli:empty"
     },
     "on_item_condition": {
-        "type": "apoli:nbt",
-        "nbt": "{has_eyes: 1b}"
+        "type": "apoli:and",
+        "conditions": [
+            {
+                "type": "apoli:nbt",
+                "nbt": "{HasEyes: 1b}"
+            },
+            {
+                "type": "apoli:ingredient",
+                "ingredient": {
+                    "item": "minecraft:end_portal_frame"
+                }
+            }
+        ]
     },
     "on_item_action": {
         "type": "apoli:modify",
-        "modifier": "ioi-pi:api/select_item"
+        "modifier": "ioi-pi:api/select/on_item"
     },
     "entity_action": {
         "type": "apoli:and",

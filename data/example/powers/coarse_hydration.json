@@ -32,11 +32,11 @@
     },
     "using_item_action": {
         "type": "apoli:modify",
-        "modifier": "ioi-pi:api/select_extra_item"
+        "modifier": "ioi-pi:api/select/using_item"
     },
     "on_item_action": {
         "type": "apoli:modify",
-        "modifier": "ioi-pi:api/select_item"
+        "modifier": "ioi-pi:api/select/on_item"
     },
     "entity_action": {
         "type": "apoli:and",
