@@ -11,7 +11,7 @@ scoreboard players operation #total coarse_hydration += #items_to_give coarse_hy
 
 
 #   Prepare the Dirt item in the shulker box
-data modify block -30000000 0 1602 Items set from storage example:coarse_hydration root.item
+data modify block -30000000 0 1602 Items append from storage example:coarse_hydration root.item
 
 
 #   If the score of the `#inventory_elements` score holder is 37 or greater, spawn the Dirt item at the position of the player. Otherwise, give the Dirt item

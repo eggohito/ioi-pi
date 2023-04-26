@@ -43,7 +43,7 @@
         "actions": [
             {
                 "type": "apoli:execute_command",
-                "command": "tag @s add example.water_bottle_on_coarse_dirt"
+                "command": "tag @s add example.coarse_hydration"
             },
             {
                 "type": "apoli:execute_command",
@@ -51,7 +51,7 @@
             },
             {
                 "type": "apoli:execute_command",
-                "command": "tag @s remove example.water_bottle_on_coarse_dirt"
+                "command": "tag @s remove example.coarse_hydration"
             }
         ]
     }

@@ -1,4 +1,4 @@
-#   Subtract 1 from the current count of the Coarse Dirt item that is being modified
+#   Decrement the amount of Coarse Dirt items that are being modified
 execute store result storage ioi-pi:io root.item.Count byte 1 run scoreboard players remove #coarse_dirts coarse_hydration 1
 
 
