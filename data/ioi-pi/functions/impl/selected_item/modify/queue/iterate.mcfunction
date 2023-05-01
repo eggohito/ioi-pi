@@ -8,7 +8,7 @@
 
 
 #   Modify the current element if it's selected
-execute if data storage ioi-pi:tmp/general root.queue.in[-1].tag{ioi_pi: {selected: 1b, type: "on_item"}} run function ioi-pi:impl/selected_item/modify/queue/peek
+execute if data storage ioi-pi:tmp/general root.queue.in[-1].tag{ioi_pi: {selected: 1b}} unless data storage ioi-pi:tmp/general root.queue.in[-1].tag{ioi_pi: {type: "using_item"}} run function ioi-pi:impl/selected_item/modify/queue/peek
 
 
 #   Remove the `ioi_pi` NBT compound from the current element

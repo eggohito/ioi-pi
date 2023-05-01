@@ -18,6 +18,6 @@ execute if score #impl.selected_item.inaccessible ioi-pi matches 0 if data stora
 
 
 #   Replace the current element with the clone
-data modify storage ioi-pi:tmp/general root.item.Slot set from storage ioi-pi:tmp/general root.queue.in[-1].Slot
+data modify storage ioi-pi:io root.item.Slot set from storage ioi-pi:tmp/general root.queue.in[-1].Slot
 
 data modify storage ioi-pi:tmp/general root.queue.in[-1] set from storage ioi-pi:io root.item
